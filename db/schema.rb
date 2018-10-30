@@ -75,8 +75,6 @@ ActiveRecord::Schema.define(version: 2018_11_23_155501) do
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.datetime "remember_created_at"
     t.index ["admin"], name: "index_users_on_admin"
     t.index ["email"], name: "index_users_on_email"
   end

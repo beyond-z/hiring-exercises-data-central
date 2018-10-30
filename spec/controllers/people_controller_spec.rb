@@ -44,11 +44,7 @@ RSpec.describe PeopleController, type: :controller do
   # PeopleController. Be sure to keep this updated too.
   let(:valid_session) { {} }
   
-  describe 'when logged in' do
-    before do
-      sign_in user
-    end
-
+  describe 'list people' do
     describe "GET #index" do
       it "returns a success response" do
         get :index, params: {}, session: valid_session

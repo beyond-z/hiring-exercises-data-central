@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+      
+  data-central:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3020:3020"
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env
+
+  data-central-database:
+    image: postgres
+    env_file:
+      - .env.database
+    volumes:
+      - db_data_central:/var/lib/postgresql/data
+
+volumes:
+  db_data_central:

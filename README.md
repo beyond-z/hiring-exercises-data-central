@@ -18,9 +18,9 @@ This will take a while the first time, because Docker has to download a Ruby ima
 
 Now create the needed databases.
 
-    docker-compose exec data-central rake db:create db:schema:load db:seed
+    docker-compose exec data-central-hiring rake db:create db:schema:load db:seed
 
-We've configured Docker to run our Rails app on port 3020, so go to http://localhost:3020 in your favorite browser. If everything's working correctly, you should be brought to a page which says "Welcome!" and has links to the database data. 
+We've configured Docker to run our Rails app on port 3021, so go to http://localhost:3021 in your favorite browser. If everything's working correctly, you should be brought to a page which says "Welcome!" and has links to the database data. 
 
 
 ### Data

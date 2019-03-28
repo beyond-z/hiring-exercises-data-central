@@ -57,21 +57,4 @@ RSpec.describe PeopleController, type: :controller do
     end
   end
   
-  describe 'JSON requests' do
-    let(:access_token) { create :access_token }
-    
-    describe "GET #index" do
-      it "allows access token via params" do
-        get :index, params: {access_key: access_token.key}, session: valid_session, format: :json
-        expect(response).to be_successful
-      end
-
-      it "allows access token via headers" do
-        request.headers.merge!('Access-Key' => access_token.key)
-        
-        get :index, params: {}, session: valid_session, format: :json
-        expect(response).to be_successful
-      end
-    end
-  end
 end
